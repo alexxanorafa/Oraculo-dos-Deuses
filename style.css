@@ -28,7 +28,7 @@
     text-align: center;
     margin: 15px 0;
     font-size: 1.2rem;
-    color: #2c3e50;
+    color: var(--primary);
   }
   h3 {
     text-align: center;
@@ -235,17 +235,75 @@ select {
     width: fit-content; /* Mantém o tamanho necessário */
 }
 
-/* Estilo do Resultado */
+/* Estilo do Resultado */ 
 .result {
     font-size: 1.2em;
     color: var(--primary);
     margin-top: 30px;
     padding: 20px;
-    background-color: var(--secondary);
+    background: linear-gradient(135deg, var(--secondary) 30%, #1e2a38 100%);
     border-radius: var(--border-radius);
     box-shadow: 0 0 15px var(--primary);
     text-align: center;
+    position: sticky;
+    overflow: hidden;
+    transition: background 0.6s ease, box-shadow 0.6s ease;
+    opacity: 0;
+    animation: fadeIn 1s forwards, pulseGlow 2s infinite alternate;
 }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+    from { box-shadow: 0 0 15px var(--primary); }
+    to { box-shadow: 0 0 25px var(--glow-color); }
+}
+
+.result::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(212, 177, 146, 0.25) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.result:hover::before {
+    opacity: 1;
+}
+
+.result:hover {
+    box-shadow: 0 0 30px var(--glow-color);
+}
+
+/* Efeito de Digitação */
+.typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--primary);
+    animation: typing 2s steps(40, end) forwards, blink 0.8s infinite;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+
+
 
 button {
     display: block;
