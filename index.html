@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oráculo dos Deuses</title>
+  <meta name="description" content="Oráculo dos Deuses - Descubra mensagens e lições dos panteões mitológicos">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Menu Navegação -->
+  <header>
+    <div class="menu-icon" id="menuIcon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav class="menu" id="menu">
+        <ul>
+            <!-- Cada item de menu dentro de <li> -->
+            <li><a href="https://alexxanorafa.github.io/Tempo_e_Sonhos/" class="menu-item">Tempo e Sonhos</a></li>
+            <li><a href="https://alexxanorafa.github.io/Aneis_da_Sabedoria/" class="menu-item">Anéis da Sabedoria</a></li>
+            <li><a href="https://alexxanorafa.github.io/TarodeMarselha/" class="menu-item">Tarô de Marselha</a></li>
+            <li><a href="https://alexxanorafa.github.io/Runas-do-Destino/" class="menu-item">Runas Nórdicas</a></li>
+            <li><a href="https://alexxanorafa.github.io/Runas-Celtas/" class="menu-item">Runas Celtas</a></li>
+            <li><a href="https://alexxanorafa.github.io/Runas-Estelares/" class="menu-item">Runas Estelares</a></li>
+            <li><a href="https://alexxanorafa.github.io/Cartas-de-Sibila/" class="menu-item">Cartas de Sibila</a></li>
+            <li><a href="https://alexxanorafa.github.io/Oraculo-dos-Deuses/" class="menu-item">Oráculo dos Deuses</a></li>
+            <li><a href="https://alexxanorafa.github.io/Livro-das-Sombras/" class="menu-item">Livro das Sombras</a></li>
+            <li><a href="https://alexxanorafa.github.io/O-Construtor-do-Destino/" class="menu-item">O Construtor do Destino</a></li>
+            <li><a href="https://alexxanorafa.github.io/Tabuleiro-Quantico/" class="menu-item">Tabuleiro Quantico</a></li>
+            <li><a href="https://alexxanorafa.github.io/Oraculo-das-Pedras/" class="menu-item">Oráculo das Pedras</a></li>
+            <li><a href="https://alexxanorafa.github.io/I-Ching-Virtual/" class="menu-item">I Ching Virtual</a></li>
+            <li><a href="https://alexxanorafa.github.io/Biblioteca-Onirica/" class="menu-item">Biblioteca Onirica</a></li>
+            <li><a href="https://alexxanorafa.github.io/Kabbalah-Interativa/" class="menu-item">Kabbalah Interativa</a></li>
+            <li><a href="https://alexxanorafa.github.io/Almas-Conectadas/" class="menu-item">Almas Conectadas</a></li>
+            <li><a href="https://alexxanorafa.github.io/Pendulo-Divinatorio/" class="menu-item">Pendulo Divinatorio</a></li>
+            <li><a href="https://alexxanorafa.github.io/Buzios/" class="menu-item">Buzios</a></li>
+            <li><a href="https://alexxanorafa.github.io/Tasseografia/" class="menu-item">Tasseografia</a></li>
+            <li><a href="https://alexxanorafa.github.io/Xamanismo-Animal/" class="menu-item">Xamanismo Animal</a></li>
+            <li><a href="https://alexxanorafa.github.io/Animais-de-Poder/" class="menu-item">Animais de Poder</a></li>
+            <li><a href="https://alexxanorafa.github.io/Jornada-Arquetipica/" class="menu-item">Jornada Arquetípica</a></li>
+            <li><a href="https://alexxanorafa.github.io/Whispering-Shadows/" class="menu-item">Whispering Shadows</a></li>
+            <li><a href="https://alexxanorafa.github.io/Whispering-Shadows-2/" class="menu-item">Whispering Shadows 2</a></li>
+            <li><a href="https://alexxanorafa.github.io/Whispering-Shadows-3/" class="menu-item">Whispering Shadows 3</a></li>
+            <li><a href="https://alexxanorafa.github.io/The-Da-Vinci-Code/" class="menu-item">The Da Vinci Code</a></li>
+        </ul>
+    </nav>
+</header>
+
+<h1>Oráculo dos Deuses</h1>
+
+<main>
+  <nav class="menu" id="menu">
+    <ul>
+        <li><a href="#" class="menu-item">Tiragem dos Olimpianos</a></li>
+        <li><a href="#" class="menu-item">Leitura dos Neteru</a></li>
+        <li><a href="#" class="menu-item">Sorteio dos Aesir</a></li>
+    </ul>
+</nav>
+    <div>
+      <h3>Escolha o panteão:</h3>
+    <select id="panteao-opcao" onchange="exibirInstrucoes()">
+        <option value="grego">Panteão Grego</option>
+        <option value="egipcio">Panteão Egípcio</option>
+        <option value="nordico">Panteão Nórdico</option>
+    </select>
+    </div>
+
+    <div class="cartas-container" id="cartas-container"></div>
+    <button onclick="sortearCartas()">Sortear Cartas</button>
+
+    <div class="result" id="result">
+      <h2>Mensagem dos Deuses</h2>
+      <div id="cartas-meanings"></div>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
